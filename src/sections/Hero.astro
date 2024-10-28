@@ -1,0 +1,71 @@
+---
+import SocialMediaLink from "@/components/SocialMediaLink.astro";
+---
+
+<section id="inicio" class="w-full h-[100vh]">
+  <h1 class="sr-only">
+    Portafolio de <strong>Renato Cavieres Díaz</strong>
+  </h1>
+
+  <div
+    class="blur-3xl -z-20 opacity-20 w-1/2 lg:w-[500px] h-[500px] bg-[var(--principal)] rounded-[50%] absolute -top-96 left-1/2 -translate-x-2/4"
+  >
+  </div>
+  <div
+    class="blur-3xl -z-20 opacity-20 w-1/2 lg:w-[300px] h-[300px] bg-[var(--principal)] rounded-[50%] absolute bottom-56 left-52 lg:bottom-36 lg:left-36"
+  >
+  </div>
+
+  <div
+    class="w-full h-full text-white flex flex-col px-10 lg:flex-row items-center justify-center lg:space-x-32"
+  >
+    <div class="flex flex-col px-2 lg:px-0">
+      <h2 class="font-bold text-2xl lg:text-[36px]">
+        ¡Hola, soy Renato Cavieres! 🚀
+      </h2>
+      <p
+        class="font-light mt-2 lg:mt-5 text-lg lg:text-[24px] lg:max-w-[500px]"
+      >
+        Soy un desarrollador de software apasionado por crear soluciones de
+        software efectivas y enfocadas en mejorar la experiencia de los
+        usuarios.
+      </p>
+
+      <div class="flex flex-row space-x-6 mt-4">
+        <SocialMediaLink
+          socialMedia="linkedin"
+          url="https://www.linkedin.com/in/renato-andrés-cavieres-díaz-7b6388237"
+        />
+        <SocialMediaLink
+          socialMedia="github"
+          url="https://github.com/maoudev"
+        />
+        <SocialMediaLink
+          socialMedia="mail"
+          url="mailto:renato.cavieres@proton.me"
+        />
+      </div>
+    </div>
+
+    <div class="w-fit lg:flex justify-center hidden mt-4">
+      <img
+        id="foto_perfil"
+        class="w-[300px] relative z-20"
+        src="/img/mi foto.png"
+        alt="Imagen de Renato Cavieres"
+      />
+
+      <img
+        class="w-[300px] opacity-10 absolute -z-10 blur-xl"
+        src="/img/foto_bg.webp"
+        alt="Imagen de Renato Cavieres"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  #foto_perfil {
+    mask-image: linear-gradient(#110e0e 80%, transparent);
+  }
+</style>

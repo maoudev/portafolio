@@ -1,0 +1,67 @@
+---
+import android from "../../public/skills/android.svg";
+import angular from "../../public/skills/angular.svg";
+import astro from "../../public/skills/astro.svg";
+import css from "../../public/skills/css.svg";
+import go from "../../public/skills/go.svg";
+import html from "../../public/skills/html.svg";
+import java from "../../public/skills/java.svg";
+import javascript from "../../public/skills/javascript.svg";
+import spring from "../../public/skills/spring.svg";
+import typescript from "../../public/skills/typescript.svg";
+import tailwind from "../../public/skills/tailwind.svg";
+import mysql from "../../public/skills/mysql.svg";
+import react from "../../public/skills/react.svg";
+
+interface Props {
+  name:
+    | "android"
+    | "angular"
+    | "astro"
+    | "css"
+    | "go"
+    | "html"
+    | "java"
+    | "javascript"
+    | "spring"
+    | "typescript"
+    | "tailwind"
+    | "mysql"
+    | "react";
+}
+
+const { name } = Astro.props;
+
+const getSkill = () => {
+  switch (name) {
+    case "android":
+      return android;
+    case "angular":
+      return angular;
+    case "astro":
+      return astro;
+    case "css":
+      return css;
+    case "go":
+      return go;
+    case "html":
+      return html;
+    case "java":
+      return java;
+    case "javascript":
+      return javascript;
+    case "spring":
+      return spring;
+    case "typescript":
+      return typescript;
+    case "tailwind":
+      return tailwind;
+    case "mysql":
+      return mysql;
+    case "react":
+      return react;
+  }
+};
+---
+
+<img src={getSkill().src} alt={"Logo de " + name} />

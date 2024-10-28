@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import About from "@/sections/About.astro";
+import Education from "@/sections/Education.astro";
+import Footer from "@/sections/Footer.astro";
+import Header from "@/sections/Header.astro";
+import Hero from "@/sections/Hero.astro";
+import Projects from "@/sections/Projects.astro";
+import Skills from "@/sections/Skills.astro";
+---
+
+<Layout
+  title="Renato Cavieres - Portafolio"
+  description="Portafolio de Renato Cavieres (maoudev), desarrollador de software apasionado por la tecnología y la programación."
+>
+  <Header />
+  <main class="divide-y divide-[rgba(155,155,155,0.2)]">
+    <Hero />
+    <About />
+    <Education />
+    <Skills />
+    <Projects />
+  </main>
+  <Footer />
+</Layout>

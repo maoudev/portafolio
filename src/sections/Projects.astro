@@ -1,0 +1,57 @@
+---
+import Project from "@/components/Project.astro";
+
+const projects = [
+  {
+    title: "Sistema PAE",
+    description:
+      "Este software fue desarrollado para tener un mejor control de los almuerzos del Liceo Comercial Diego Portales",
+    technologies: ["React", "Go", "MySQL", "Wails"],
+    image: "/img/sistema-pae.jpeg",
+    url: "https://github.com/maoudev/sistema-pae",
+  },
+  {
+    title: "YT A MP3",
+    description:
+      "YT A MP3 es una aplicación desarrollada en Go que permite convertir videos de YouTube a archivos MP3 de manera eficiente.",
+    technologies: ["Astro", "Tailwind CSS", "Go", "Gin"],
+    image: "/img/ytamp3.png",
+    url: "https://github.com/maoudev/ytamp3",
+  },
+  {
+    title: "YT A MP3: Android App",
+    description:
+      "YT A MP3 trae toda la eficacia del conversor de YouTube a MP3 al ecosistema Android, desarrollado de forma nativa.",
+    technologies: ["Java", "Android"],
+    image: "/img/ytamp3-app.png",
+    url: "https://github.com/maoudev/ytamp3-app",
+  },
+];
+---
+
+<section
+  id="habilidades"
+  class="w-full min-h-[100vh] py-20 overflow-hidden flex flex-col items-center justify-center px-10 text-white relative"
+>
+  <div
+    class="blur-3xl -z-20 opacity-20 w-11/12 h-[400px] bg-[var(--principal)] rounded-[50%] absolute -bottom-96 left-1/2 -translate-x-2/4"
+  >
+  </div>
+
+  <div class="">
+    <h2 class="font-bold text-2xl lg:text-[36px]">Proyectos 💼</h2>
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 mt-10">
+      {
+        projects.map((project) => (
+          <Project
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            image={project.image}
+            url={project.url}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

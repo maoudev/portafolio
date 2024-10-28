@@ -1,0 +1,44 @@
+---
+import githubIcon from "../../public/github.svg";
+import linkedinIcon from "../../public/linkedin.svg";
+import mailIcon from "../../public/mail.svg";
+
+interface Props {
+  socialMedia: "github" | "linkedin" | "mail";
+  url: string;
+}
+
+const { socialMedia, url } = Astro.props;
+
+const getSocialMediaIcon = (socialMedia: string) => {
+  switch (socialMedia) {
+    case "github":
+      return githubIcon;
+    case "linkedin":
+      return linkedinIcon;
+    case "mail":
+      return mailIcon;
+    default:
+      return githubIcon;
+  }
+};
+---
+
+<a
+  class="hover:scale-110 drop-shadow-lg drop-shadow-white transition-all duration-200"
+  href={url}
+  title={socialMedia === "mail" ? "Enviar un correo" : "Ir a " + socialMedia}
+  aria-label={socialMedia === "mail"
+    ? "Enviar un correo"
+    : "Ir a " + socialMedia}
+  target="_blank"
+  rel="noreferrer"
+>
+  <img src={getSocialMediaIcon(socialMedia).src} alt="" />
+</a>
+
+<style>
+  a:hover {
+    filter: drop-shadow(0 0 2px white);
+  }
+</style>

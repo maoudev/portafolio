@@ -1,0 +1,32 @@
+---
+import Skill from "@/components/Skill.astro";
+---
+
+<section
+  id="habilidades"
+  class="w-full h-[100vh] overflow-hidden flex flex-col items-center justify-center px-10 text-white relative"
+>
+  <div
+    class="blur-3xl -z-20 opacity-10 w-1/2 lg:w-[300px] h-[300px] bg-[var(--principal)] rounded-[50%] absolute bottom-20 left-12 lg:bottom-10 lg:left-36"
+  >
+  </div>
+
+  <div>
+    <h2 class="font-bold text-2xl lg:text-[36px]">Skills ⚙️</h2>
+    <div class="grid grid-cols-5 gap-10 lg:grid-cols-5 mt-10">
+      <Skill name="android" />
+      <Skill name="angular" />
+      <Skill name="astro" />
+      <Skill name="css" />
+      <Skill name="go" />
+      <Skill name="html" />
+      <Skill name="java" />
+      <Skill name="javascript" />
+      <Skill name="spring" />
+      <Skill name="typescript" />
+      <Skill name="tailwind" />
+      <Skill name="mysql" />
+      <Skill name="react" />
+    </div>
+  </div>
+</section>
